@@ -255,6 +255,15 @@ rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
+  -- Zen Mode
+  {
+    'folke/zen-mode.nvim',
+    opts = {},
+    keys = {
+      { '<leader>z', '<cmd>ZenMode<cr>', desc = '[Z]en Mode' },
+    },
+  },
+
   -- NOTE: Plugins can be added via a link or github org/name. To run setup automatically, use `opts = {}`
   { 'NMAC427/guess-indent.nvim', opts = {} },
 
