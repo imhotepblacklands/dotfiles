@@ -652,6 +652,11 @@ require('lazy').setup({
       --
       -- You can press `g?` for help in this menu.
       local ensure_installed = vim.tbl_keys(servers or {})
+      -- Filter out servers installed globally in Termux
+      ensure_installed = vim.tbl_filter(function(name)
+        return name ~= 'lua_ls'
+      end, ensure_installed)
+
       vim.list_extend(ensure_installed, {
         -- You can add other tools here that you want Mason to install
       })
