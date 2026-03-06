@@ -1,0 +1,4 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR __fish_initialized:4300
+SETUVAR fish_user_paths:/data/data/com\x2etermux/files/home/go/bin\x1e/data/data/com\x2etermux/files/home/bin
