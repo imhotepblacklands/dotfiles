@@ -114,7 +114,23 @@ vim.o.showmode = false
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
+vim.schedule(function()
+  vim.o.clipboard = 'unnamedplus'
+  if vim.fn.executable 'termux-clipboard-set' == 1 then
+    vim.g.clipboard = {
+      name = 'termux-api',
+      copy = {
+        ['+'] = 'termux-clipboard-set',
+        ['*'] = 'termux-clipboard-set',
+      },
+      paste = {
+        ['+'] = 'termux-clipboard-get',
+        ['*'] = 'termux-clipboard-get',
+      },
+      cache_enabled = 0,
+    }
+  end
+end)
 
 -- Enable break indent
 vim.o.breakindent = true
