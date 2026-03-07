@@ -283,6 +283,7 @@ require('lazy').setup({
   {
     'folke/zen-mode.nvim',
     opts = {},
+    ft = { 'markdown' },
     keys = {
       { '<leader>z', '<cmd>ZenMode<cr>', desc = '[Z]en Mode' },
     },
