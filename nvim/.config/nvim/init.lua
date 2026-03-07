@@ -237,14 +237,6 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
--- Auto Zen Mode for Markdown
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'markdown',
-  callback = function()
-    vim.cmd 'ZenMode'
-  end,
-})
-
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.hl.on_yank()`
@@ -283,7 +275,10 @@ require('lazy').setup({
   {
     'folke/zen-mode.nvim',
     opts = {},
-    ft = { 'markdown' },
+    config = function(_, opts)
+      require('zen-mode').setup(opts)
+      if vim.bo.filetype == 'markdown' then require('zen-mode').open() end
+    end,
     keys = {
       { '<leader>z', '<cmd>ZenMode<cr>', desc = '[Z]en Mode' },
     },
