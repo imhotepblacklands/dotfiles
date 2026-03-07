@@ -274,6 +274,7 @@ require('lazy').setup({
   -- Zen Mode
   {
     'folke/zen-mode.nvim',
+    lazy = false,
     opts = {},
     config = function(_, opts)
       require('zen-mode').setup(opts)
