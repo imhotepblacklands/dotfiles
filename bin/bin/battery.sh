@@ -24,7 +24,8 @@ fi
 icon=""
 color=""
 
-if [[ "$charging_status" == *"CHARGING"* ]]; then
+# Handle "CHARGING" and "FULL" as charging states
+if [[ "$charging_status" == "\"CHARGING\"" ]] || [[ "$charging_status" == "\"FULL\"" ]]; then
 	# Charging icons
 	case $battery_percentage in
 	100) icon="󰂅" color="#00FF00" ;;
