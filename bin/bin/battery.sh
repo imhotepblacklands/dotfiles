@@ -118,5 +118,10 @@ else
 	esac
 fi
 
+charging_indicator=""
+if [ "$charging_status" = "\"CHARGING\"" ]; then
+	charging_indicator="󱐋 "
+fi
+
 # Output the formatted string for tmux
-echo "#[fg=$color]$icon #[default]$battery_percentage %"
+echo "#[fg=$color]$icon #[default]$charging_indicator$battery_percentage %"
