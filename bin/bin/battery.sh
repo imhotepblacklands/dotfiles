@@ -58,4 +58,4 @@ else
 fi
 
 # Output the formatted string for tmux
-echo "#[fg=$color]$icon #[default]$battery_percentage%"
+echo "#[fg=$color]$icon #[fg=#7aa2f7,bg=#3b4261]$battery_percentage%"

@@ -1,0 +1,102 @@
+# Yazi Tokyo Night Theme (LazyVim Style)
+
+[manager]
+cwd = { fg = "#7aa2f7", italic = true }
+
+# Hover
+hovered         = { fg = "#15161e", bg = "#7aa2f7", bold = true }
+preview_hovered = { underline = true }
+
+# Find
+find_keyword  = { fg = "#e0af68", italic = true }
+find_position = { fg = "#f7768e", bg = "default", bold = true }
+
+# Marker
+marker_selected = { fg = "#9ece6a", bg = "#9ece6a" }
+marker_copied   = { fg = "#e0af68", bg = "#e0af68" }
+marker_cut      = { fg = "#f7768e", bg = "#f7768e" }
+
+# Tab
+tab_active   = { fg = "#15161e", bg = "#7aa2f7", bold = true }
+tab_inactive = { fg = "#a9b1d6", bg = "#3b4261" }
+tab_width    = 1
+
+# Count
+count_selected = { fg = "#15161e", bg = "#9ece6a" }
+count_copied   = { fg = "#15161e", bg = "#e0af68" }
+count_cut      = { fg = "#15161e", bg = "#f7768e" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#3b4261" }
+
+# Mode
+[mode]
+normal_main = { fg = "#15161e", bg = "#7aa2f7", bold = true }
+normal_alt  = { fg = "#7aa2f7", bg = "#3b4261" }
+
+select_main = { fg = "#15161e", bg = "#bb9af7", bold = true }
+select_alt  = { fg = "#bb9af7", bg = "#3b4261" }
+
+unset_main  = { fg = "#15161e", bg = "#9ece6a", bold = true }
+unset_alt   = { fg = "#9ece6a", bg = "#3b4261" }
+
+# Status
+[status]
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "#3b4261", bg = "#3b4261" }
+
+# For newer Yazi versions
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+# Progress
+progress_label  = { fg = "#ffffff", bold = true }
+progress_normal = { fg = "#7aa2f7", bg = "#3b4261" }
+progress_error  = { fg = "#f7768e", bg = "#3b4261" }
+
+# Permissions
+permissions_t = { fg = "#7aa2f7" }
+permissions_r = { fg = "#e0af68" }
+permissions_w = { fg = "#f7768e" }
+permissions_x = { fg = "#9ece6a" }
+permissions_s = { fg = "#565f89" }
+
+[input]
+border   = { fg = "#7aa2f7" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+[select]
+border   = { fg = "#7aa2f7" }
+active   = { fg = "#bb9af7", bold = true }
+inactive = {}
+
+[tasks]
+border  = { fg = "#7aa2f7" }
+title   = {}
+hovered = { fg = "#bb9af7", underline = true }
+
+[help]
+border  = { fg = "#7aa2f7" }
+key     = { fg = "#9ece6a" }
+desc    = { fg = "#a9b1d6" }
+hovered = { bg = "#3b4261", bold = true }
+footer  = { fg = "#15161e", bg = "#7aa2f7" }
+
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#bb9af7" },
+	{ mime = "video/*", fg = "#bb9af7" },
+	{ mime = "audio/*", fg = "#bb9af7" },
+	{ mime = "application/zip", fg = "#f7768e" },
+	{ mime = "application/x-tar", fg = "#f7768e" },
+	{ mime = "application/x-bzip2", fg = "#f7768e" },
+	{ mime = "application/x-gzip", fg = "#f7768e" },
+	{ mime = "application/x-7z-compressed", fg = "#f7768e" },
+	{ mime = "application/x-rar", fg = "#f7768e" },
+	{ name = "*", fg = "#a9b1d6" },
+	{ name = "*/", fg = "#7aa2f7" }
+]
